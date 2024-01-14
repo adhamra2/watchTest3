@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 5%;
+    position: absolute;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #8B8E99;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.logo {
+    color: #FFF;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.header-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.header-btns a {
+    color: #FFF;
+    font-size: 20px;
+}
+
+.menu {
+    display: none;
+}
+
+.bottom-menu {  
+    width:100%;
+      position:fixed;
+      bottom: 0;
+      margin-bottom: 10px;
+      background-color:#FFF;
+      display: flex;
+      align-items:center;
+      padding-inline: auto;
+      padding-top:5px;
+    padding-bottom:5px;
+    animation-name: bottomMenu ;
+    animation-duration: 2s;
+    border-radius: 1.6rem;
+      }
+  .bottom-menu a {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    flex:1;
+      padding:5px;
+      color:#949494;
+    font-weight:600;
+    font-size:12px;
+    text-decoration:none;
+    transition:all .3s;
+  }
+  .bottom-menu a i{
+    font-size:18px;
+    margin-bottom:5px;
+  }
+  .bottom-menu a.active, .bottom-menu a:hover {
+    color:#000;
+  }
+  .bottom-menu a:last-child{
+      margin-right:0;
+      }
+  span.bosluk {
+    flex:1;
+  }
+
+.Home {
+    background: linear-gradient(155deg, #383638 2.06%, #0B0B0B 33.08%);
+    height: 100vh;
+    width: 100%;
+    padding: 0 5%;
+    padding-top: 250px  ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Home-header {
+    color: #FFF;
+    max-width: 457px;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125.5%; /* 80.32px */
+}
+
+.Home-desc {
+    color: #8B8E99;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125.5%; /* 20.08px */
+    max-width: 457px;
+    margin-block: 25px;
+}
+
+.Searchinput {
+    position: absolute;
+    width: 443px;
+    height: 60px;
+    border-radius: 15px;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    border: none;
+}
+
+.Searchinput input {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: #FFF;
+    padding-left: 50px;
+    padding-right: 80px;
+    border: none;
+}
+
+.Searchinput a,
+.Searchinput i {
+    position: absolute;
+    z-index: 1;
+}
+
+.Searchinput a {
+    right: 0;
+    margin-right: 20px;
+    width: 112px;
+    height: 45px;
+    background: #3858D6;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+
+.Searchinput i {
+    left: 0;
+    margin-left: 20px;
+    font-size: 21px;
+    color: #3858D6;
+}
+
+.Searchinput input::placeholder {
+    color: rgba(139, 142, 153, 0.70);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.HeroImage {
+    max-width: 400px;
+    max-height: 450px;
+}
+
+.HeroImage img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*--------------------------Transition--------------------------*/
+
+@keyframes bottomMenu {
+    from {
+        transform: translateY(100%);
+      }
+    
+      to {
+        transform: translateY(0%);
+      }
+}
+
+/*--------------------------Media--------------------------*/
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    .Home {
+        display: block;
+        height: 100%;
+        padding-top: 100px;
+        padding-bottom: 150px;
+    }
+    .HeroImage {
+        max-width: 300px;
+        max-height: 300px;
+        margin-top: 170px;
+        margin-inline: auto;
+    }
+    .Home-header {
+        font-size: 45px;
+    }
+    .Searchinput {
+        width: 300px;
+    }
+    .Searchinput a {
+        display: none;
+    }
+}
+
+@media (max-width: 391px) {
+    .HeroImage {
+        max-width: 240px;
+        max-height: 240px;
+    }
+}
+
+@media (min-width: 769px) {
+    .bottom-menu {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 920px) {
+    .HeroImage {
+        display: none;
+    }
+}
